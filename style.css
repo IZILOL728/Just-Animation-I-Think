@@ -1,0 +1,138 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Затемненный фон */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+
+/* Меню */
+.menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 80%;
+    max-width: 400px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+/* Отображение меню */
+.menu.show {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Кнопка закрытия меню */
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Поле ввода */
+input {
+    width: 80%;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Кнопка открытия меню */
+.open-menu-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.open-menu-btn:hover {
+    background-color: #0073a8;
+}
+
+/* Контейнер для анимаций */
+.container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+/* Блок для анимации */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: all 1s ease;
+    opacity: 1;
+}
+
+/* Стиль кнопок */
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Темная тема */
+.dark-mode {
+    background-color: #333;  /* Темный фон */
+    color: white;             /* Белый текст */
+}

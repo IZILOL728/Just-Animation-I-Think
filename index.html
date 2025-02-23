@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анімації з кнопками</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button class="open-menu-btn" onclick="openMenu()">Показати зміни</button>
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <div class="menu" id="menu">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+        <h1>Зміни в грі</h1>
+        <ul>
+            <h1>Оновлення 0.1</h1>
+            <h2>🔥 Что изменилось?</h2>
+            <li>✔ Меню теперь по центру экрана</li>
+            <li>✔ Добавлен затемненный фон</li>
+            <li>✔ Плавное открытие и закрытие</li>
+            <li>Теперь меню выглядит красиво и удобно! 🚀🔥</li>
+            <h1>Оновлення 0.2</h1>
+            <h2>🔥 Что изменилось?</h2>
+            <li>✔ Теперь можно менять цвет фона</li>
+            <li>✔ Сделана плавная анимация смены цвета фона</li>
+            <li>Теперь можно менять цвет фона то как вам больше нравиться и то как вам будет больше удобно! 🚀🔥</li>
+        </ul>
+
+        <h3>Введіть текст:</h3>
+        <input type="text" id="userInput" placeholder="Напишіть щось...">
+        <button onclick="showText()">Показати</button>
+
+        <p id="outputText"></p>
+    </div>
+
+    <div class="container">
+        <div class="box" id="box"></div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="moveBox()">Перемістити вперед</button>
+        <button onclick="moveBoxBack()">Перемістити назад</button>
+        <button onclick="changeColor()">Змінити колір</button>
+        <button onclick="fadeIn()">Показати</button>
+        <button onclick="fadeOut()">Сховати</button>
+        <button onclick="resizeBox()">Збільшити розмір</button>
+        <button onclick="resizeBoxSmall()">Зменшити розмір</button>
+        <button onclick="resetSize()">Відновити нормальний розмір</button>
+        <button onclick="toggleDarkLightMode()">Перемкнути темний/світлий режим</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
